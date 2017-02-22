@@ -5,7 +5,7 @@ require 'spec_helper'
 # So I know which books I am reading
 
 # - [] When a user visits the home page, they can click my books to see their book list
-# - [] When a user visits the show page directly, they see the details of a book
+# - [] When a user visits the my books page directly, they see the list of their books
 
 feature "User sees their book list" do
   let(:user) { FactoryGirl.create(:user) }

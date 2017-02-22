@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe User do
-  it { should have_many(:users) }
-  
   describe ".find_or_create_from_ominiauth" do
     context "for an auth hash that does not have the provider and uid of an already existing user" do
       let(:nonexisting_user) {

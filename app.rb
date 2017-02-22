@@ -14,7 +14,13 @@ helpers do
 end
 
 get '/' do
-  redirect '/meetups'
+  @books = Book.all
+  erb :'books/index'
+end
+
+get '/books/:book_id' do
+  @book = Book.find(params[:book_id])
+  erb :'books/show'
 end
 
 get '/auth/github/callback' do
@@ -32,6 +38,7 @@ get '/sign_out' do
   redirect '/'
 end
 
-get '/meetups' do
-  erb :'meetups/index'
+get '/my_books' do
+  @books = current_user.books
+  erb :'books/my_books'
 end

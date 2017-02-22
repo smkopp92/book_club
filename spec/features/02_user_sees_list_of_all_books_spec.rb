@@ -4,8 +4,8 @@ require 'spec_helper'
 # I can see a list of books
 # So I know which books are available for book club
 
-# - [] When a signed in user visits the home page, they see a list of all books
-# - [] When a signed out user visits the home page, they see a list of all books
+# - [x] When a signed in user visits the home page, they see a list of all books
+# - [x] When a signed out user visits the home page, they see a list of all books
 
 feature "User sees list of all books" do
   let(:user) { FactoryGirl.create(:user) }
